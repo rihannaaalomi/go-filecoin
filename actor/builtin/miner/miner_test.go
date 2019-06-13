@@ -353,7 +353,7 @@ func TestMinerSubmitPoSt(t *testing.T) {
 	res, err = th.CreateAndApplyTestMessage(t, st, vms, minerAddr, 0, 9, "getProvingPeriodStart", ancestors)
 	require.NoError(t, err)
 	require.NoError(t, res.ExecutionError)
-	require.Equal(t, types.NewBlockHeightFromBytes(res.Receipt.Return[0]), types.NewBlockHeight(20003))
+	require.Equal(t, types.NewBlockHeightFromBytes(res.Receipt.Return[0]), types.NewBlockHeight(1003))
 
 	// fail to submit inside the proving period (plus generation attack threshold)
 	proof = th.MakeRandomPoStProofForTest()
