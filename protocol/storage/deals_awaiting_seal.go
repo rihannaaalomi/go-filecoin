@@ -13,7 +13,7 @@ func init() {
 	cbor.RegisterCborType(dealsAwaitingSeal{})
 }
 
-// sectorInfo combines sector Metadata from rust proofs with go-filecoin specific data
+// sectorInfo combines sector Metadata from rust Proofs with go-filecoin specific data
 type sectorInfo struct {
 	// Metadata contains information about the sealed sector needed to verify the seal
 	Metadata *sectorbuilder.SealedSectorMetadata

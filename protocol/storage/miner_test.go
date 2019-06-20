@@ -454,7 +454,7 @@ func minerWithAcceptedDealTestSetup(t *testing.T, proposalCid cid.Cid, sectorID 
 	}
 
 	// Simulates miner.acceptProposal without going to the network to fetch the data by storing the deal.
-	// Mapping the proposalCid to a sectorID simulates staging the sector.
+	// Mapping the proposalCid to a SectorID simulates staging the sector.
 	require.NoError(t, porcelainAPI.DealPut(storageDeal))
 	miner.dealsAwaitingSeal.attachDealToSector(context.Background(), sectorID, proposalCid)
 
